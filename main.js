@@ -47,7 +47,7 @@ function showSeries(series) {
   // grabing parent
   const parent = document.querySelector("main");
   // append
-  parent.appendChildh(copy);
+  parent.appendChild(copy);
 }
 
 /*burger menu*/
