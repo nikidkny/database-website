@@ -15,10 +15,42 @@ fetch(url, options)
   })
   .then((data) => {
     console.log(data);
+    handleShowlist(data);
   })
   .catch((e) => {
     console.error("An error occured:", e.message);
   });
+
+function handleShowlist(data) {
+  console.log(data);
+  // 1. make the
+  data.forEach(showSeries);
+}
+
+{
+  /*         <template id="smallSeriesTemplate">
+          <article>
+            <img class="seriesImage" src="" alt="" />
+            <h2 class="seriesName"></h2>
+            <p class="seriesDescription"></p>
+          </article>
+        </template>
+ */
+}
+
+function showSeries(series) {
+  // grabbing the tamplate
+  const template = document.querySelector("#smallSeriesTemplate").content;
+  // cloning the template
+  const copy = template.cloneNode(true);
+  //changing the contents => do this last
+
+  // grabing parent
+  const parent = document.querySelector("main");
+  // append
+  parent.appendChildh(copy);
+}
+
 /*burger menu*/
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
