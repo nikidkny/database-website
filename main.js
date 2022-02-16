@@ -23,7 +23,6 @@ fetch(url, options)
 
 function handleShowlist(data) {
   console.log(data);
-  // 1. make the
   data.forEach(showSeries);
 }
 
