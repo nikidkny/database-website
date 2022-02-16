@@ -10,3 +10,9 @@
 html{
   background-color: var(--bg-color)
 }
+
+.h1_landing_page{
+  font-family: "Monoton", cursive;
+  letter-spacing: +2px;
+  font-size: 4rem;
+}
