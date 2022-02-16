@@ -84,25 +84,25 @@ p {
   height: fit-content;
 }
 .couch_img {
-  max-width: 45%;
+  max-width: 40%;
   top: 10%;
   animation: couch 2s forwards;
   -webkit-animation: couch 2s forwards;
 }
 .potato_img {
   position: absolute;
-  max-width: 12%;
+  max-width: 10%;
   top: 10%;
   animation: potato 2.5s forwards;
   -webkit-animation: potato 2.5s forwards;
 }
 .popcorn_img {
   position: absolute;
-  max-width: 5%;
-  top: 22%;
-  left: 42%;
+  max-width: 4%;
+  top: 23%;
+  left: 43%;
   animation: popcorn 3s forwards;
-  -webkit-animation: popcorn 4s forwards;
+  -webkit-animation: popcorn 3s forwards;
 }
 
 @keyframes couch {
@@ -136,8 +136,8 @@ p {
   flex-direction: row;
 }
 button {
-  min-width: 146px;
   font-family: "Koh Santepheap", cursive;
+  font-size: 1rem;
   padding: 1rem;
   border-radius: 23px;
   background: var(--button-color);
@@ -149,4 +149,10 @@ button {
   transition: all 0.2s ease;
   cursor: pointer;
   margin: 0 1rem 0 0;
+}
+.z-button{
+  min-width: 240px;
+}
+.m-button{
+  min-width: 240px;
 }
