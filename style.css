@@ -1,3 +1,123 @@
-main {
-  background-color: aliceblue;
+@import url("https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,400;0,600;1,200&display=swap");
+
+:root {
+  --bg-color: #ffeedb;
+  --p-color:#707070;
+  --button-color: black;
 }
+
+html{
+  background-color: var(--bg-color)
+}
+
+/*Homepage*/
+
+/*Burger menu*/
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/*main*/
+p{
+  text-align: center;
+  font-size: 2rem;
+font-family: 'Koh Santepheap', cursive;;
+  color:var(--p-color)
+}
+.h1_landing_page{
+  font-family: "Monoton", cursive;
+  letter-spacing: +2px;
+  font-size: 4rem;
+}
+.container_landing{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.couch_img{
+  max-width: 45%;
+  top: 10%;
+  animation: couch 2s forwards;
+  -webkit-animation: couch 2s forwards;
+}
+.potato_img{
+  max-width: 12%;
+  top: 20%;
+  animation: potato 2.5s forwards;
+  -webkit-animation:potato 2.5s forwards;
+}
+
+@keyframes couch {
+  0% {
+    transform: translateX(-50vw);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes potato {
+  0% {
+    transform: translateY(55vw);
+  }
+  100% {
+      transform: translateY(0%);
+  }
+}
+
+button {
+  width: 100%;
+  font-family: 'Koh Santepheap', cursive;
+  padding: 1rem;
+  border-radius: 23px;
+  background: var(--button-color);
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: white;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin: 0 1rem 0 0;
+}
+
