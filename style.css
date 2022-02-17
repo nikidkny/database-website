@@ -229,10 +229,8 @@ padding-left: 20px;
 
 }
 
-.milgrid{
+.serieslist{
 display: grid;
-grid-template-columns: repeat (2,250px );
-grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
 }
 
 .photo{
