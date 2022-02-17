@@ -106,31 +106,49 @@ html {
 /*main*/
 p {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Koh Santepheap", cursive;
   color: var(--p-color);
 }
 .h1_landing_page {
+  margin-top: 0%;
   font-family: "Monoton", cursive;
   letter-spacing: +2px;
   font-size: 4rem;
+  font-weight: lighter;
 }
 .container_landing {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+.potato_container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: fit-content;
+}
 .couch_img {
-  max-width: 45%;
+  max-width: 40%;
   top: 10%;
   animation: couch 2s forwards;
   -webkit-animation: couch 2s forwards;
 }
 .potato_img {
-  max-width: 12%;
-  top: 20%;
+  position: absolute;
+  max-width: 10%;
+  top: 10%;
   animation: potato 2.5s forwards;
   -webkit-animation: potato 2.5s forwards;
+}
+.popcorn_img {
+  position: absolute;
+  max-width: 4%;
+  top: 23%;
+  left: 43%;
+  animation: popcorn 3s forwards;
+  -webkit-animation: popcorn 3s forwards;
 }
 
 @keyframes couch {
@@ -144,15 +162,28 @@ p {
 
 @keyframes potato {
   0% {
-    transform: translateY(55vw);
+    transform: translate(55vw, -55vw);
   }
   100% {
-    transform: translateY(0%);
+    transform: translate(0%, 0%);
   }
 }
+
+@keyframes popcorn {
+  0% {
+    transform: translate(-55vw, -55vw);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
 button {
-  width: 100%;
   font-family: "Koh Santepheap", cursive;
+  font-size: 1rem;
   padding: 1rem;
   border-radius: 23px;
   background: var(--button-color);
@@ -165,5 +196,9 @@ button {
   cursor: pointer;
   margin: 0 1rem 0 0;
 }
-
-/* Styling for the list viewvs */
+.z-button {
+  min-width: 240px;
+}
+.m-button {
+  min-width: 240px;
+}
