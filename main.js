@@ -16,9 +16,13 @@ fetch(url, options)
     }
     return response.json();
   })
+  //   .then((data) => {
+  //     // console.log(data);
+  //     handleShowlist(data);
+  //   })
   .then((data) => {
-    // console.log(data);
-    handleShowlist(data);
+    console.log(data);
+    handleShows(data);
   });
 // .catch((e) => {
 //   console.error("An error occured:", e.message);
@@ -39,24 +43,24 @@ function handleShowlist(data) {
         </template>
  */
 
-function showSeries(series) {
-  console.log(series);
-  // grabbing the tamplate
-  const template = document.querySelector("#smallSeriesTemplate").content;
-  // cloning the template
-  const copy = template.cloneNode(true);
-  //changing the contents => do this last
-  copy.querySelector("h2").textContent = `${series.title}`;
-  copy.querySelector("span").textContent = `${series.ratings}`;
-  copy.querySelector(
-    "img"
-  ).src = `https://friends-5d79.restdb.io/rest/showlist/images/webp/1000/${series.id}.webp`;
-  copy.querySelector("p").textContent = `${series.description}`;
-  // grabing parent
-  const parent = document.querySelector("main");
-  // append
-  parent.appendChild(copy);
-}
+// function showSeries(series) {
+//   console.log(series);
+//   // grabbing the tamplate
+//   const template = document.querySelector("#smallSeriesTemplate").content;
+//   // cloning the template
+//   const copy = template.cloneNode(true);
+//   //changing the contents => do this last
+//   copy.querySelector("h2").textContent = `${series.title}`;
+//   copy.querySelector("span").textContent = `${series.ratings}`;
+//   copy.querySelector(
+//     "img"
+//   ).src = `https://friends-5d79.restdb.io/rest/showlist/images/webp/1000/${series.id}.webp`;
+//   copy.querySelector("p").textContent = `${series.description}`;
+//   // grabing parent
+//   const parent = document.querySelector("main");
+//   // append
+//   parent.appendChild(copy);
+// }
 
 /*burger menu*/
 function openNav() {
@@ -68,12 +72,25 @@ function closeNav() {
 }
 
 // Nancy code
-function showTvSeries(popularShows) {
-  console.log(popularShows);
-  document.querySelector(".myTitle").textContent = popularShows.title;
-  document.querySelector(".summary").textContent = popularShows.description;
+
+function handleShows(data) {
+  console.log(data);
+  data.forEach(showTvSeries);
+}
+function showTvSeries(singleShow) {
+  console.log(singleShow);
+  document.querySelector("h2").textContent = singleShow.title;
+  document.querySelector(".productname").textContent = singleShow.description;
+  // const template = document.querySelector("#singleShowTemplate").content;
+  // const copy = template.cloneNode(true);
+
+  // copy.querySelector("h2").textContent = `${singleShow.title}`;
+  // copy.querySelector("p").textContent = `${singleShow.description}`;
+
   //   document.querySelector(
   //     "img.seriesimages"
   //   ).src = `images/The Wire${popularShows.id}.png`;
   //   document.querySelector("img.seriesimages").alt = popularShows.description;
+  // const parent = document.querySelector("main");
+  // parent.appendChild(copy);
 }
