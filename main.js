@@ -12,7 +12,7 @@ const options = {
 fetch(url, options)
   .then((response) => {
     if (!response.ok) {
-      //   throw Error(response.statusText);
+      // throw Error(response.statusText);
     }
     return response.json();
   })
@@ -20,17 +20,17 @@ fetch(url, options)
     // console.log(data);
     handleShowlist(data);
   });
-//   .catch((e) => {
-//     console.error("An error occured:", e.message);
-//   });
+// .catch((e) => {
+//   console.error("An error occured:", e.message);
+// });
 
 function handleShowlist(data) {
   console.log(data);
   data.forEach(showSeries);
 }
 
-{
-  /*         <template id="smallSeriesTemplate">
+/*    Genz template    
+       <template id="smallSeriesTemplate">
           <article>
             <img class="seriesImage" src="" alt="" />
             <h2 class="seriesName"></h2> done
@@ -38,19 +38,20 @@ function handleShowlist(data) {
           </article>
         </template>
  */
-}
 
 function showSeries(series) {
+  console.log(series);
   // grabbing the tamplate
   const template = document.querySelector("#smallSeriesTemplate").content;
   // cloning the template
   const copy = template.cloneNode(true);
   //changing the contents => do this last
-  copy.querySelector(".seriesName").textContent = `${showlist.title}`;
+  copy.querySelector("h2").textContent = `${series.title}`;
+  copy.querySelector("span").textContent = `${series.ratings}`;
   copy.querySelector(
     "img"
-  ).src = `https://friends-5d79.restdb.io/rest/showlist/images/webp/1000/${showlist.id}.webp`;
-  copy.querySelector("p").textContent = `${showlist.description}`;
+  ).src = `https://friends-5d79.restdb.io/rest/showlist/images/webp/1000/${series.id}.webp`;
+  copy.querySelector("p").textContent = `${series.description}`;
   // grabing parent
   const parent = document.querySelector("main");
   // append
