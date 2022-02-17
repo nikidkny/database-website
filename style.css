@@ -202,3 +202,49 @@ button {
 .m-button {
   min-width: 240px;
 }
+
+.logo{
+padding-left: 20px;
+}
+
+
+
+.miltitle{
+
+
+}
+
+.seriesName{
+
+
+}
+
+.rating{
+
+
+}
+
+.seriesDescription{
+
+
+}
+
+.milgrid{
+display: grid;
+grid-template-columns: repeat (2,250px );
+}
+
+.photo{
+float: left;
+padding-left: 70px ;
+}
+
+.text{
+float: right;
+padding-right: 80px;
+text-align: left;
+}
+
+p{
+color: black;
+}
