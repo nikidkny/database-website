@@ -1,8 +1,8 @@
 // <!--the endpoint https://friends-5d79.restdb.io/rest/showlist
 // the API key 620d387c34fd621565858693 -->
 const urlParams = new URLSearchParams(window.location.search);
-// const _id = urlParams.get("_id");
-const id = "620bacfef701f460000a24f7";
+const id = urlParams.get("id");
+// const id = "620bacfef701f460000a24f7";
 // console.log(_id);
 
 const url = "https://friends-5d79.restdb.io/rest/showlist/" + id;
