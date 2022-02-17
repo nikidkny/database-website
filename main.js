@@ -1,3 +1,6 @@
+// const urlParams = new URLSearchParams(window.location.search);
+// const id = urlParams.get("id");
+
 const url = "https://friends-5d79.restdb.io/rest/database-tv-shows";
 fetch(url)
   .then((res) => res.json())
