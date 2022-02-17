@@ -16,13 +16,18 @@
           height="70"
           width="100"
       /></a>
-      <nav>
-        <ul>
-          <li class="nav"><a href="index.html">Home</a></li>
-          <li class="series"><a href="productlist.html">Gen - Z</a></li>
-          <li class="seriesname"><a href="product.html">Millennials</a></li>
-        </ul>
-      </nav>
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <a href="millenialmovielist.html">Millennials</a>
+          <a href="genzmovielist.html">GenZ</a>
+        </div>
+      </div>
+      <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+        >&#9776;
+      </span>
     </header>
     <main>
       <img class="seriesImage" src="images/The Wire.png" alt="poster" />
