@@ -204,49 +204,27 @@ button {
   min-width: 240px;
 }
 
-.logo{
-padding-left: 20px;
+.logo {
+  padding-left: 20px;
 }
 
-
-
-.miltitle{
-
-
+.serieslist {
+  display: grid;
 }
 
-.seriesName{
-
-
+.photo {
+  float: left;
+  padding-left: 70px;
 }
 
-.rating{
-
-
+.text {
+  float: right;
+  padding-right: 80px;
+  text-align: left;
 }
 
-.seriesDescription{
-
-
-}
-
-.serieslist{
-display: grid;
-}
-
-.photo{
-float: left;
-padding-left: 70px ;
-}
-
-.text{
-float: right;
-padding-right: 80px;
-text-align: left;
-}
-
-p{
-color: black;
+p {
+  color: black;
 }
 /* listlayout
 */
