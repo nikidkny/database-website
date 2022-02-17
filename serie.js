@@ -32,16 +32,14 @@ function handleShow(singleShow) {
   console.log(singleShow);
   document.querySelector("h2").textContent = singleShow.title;
   document.querySelector("p").textContent = singleShow.description;
-  document.querySelector(
-    "img.seriesimages"
-  ).src = `https://hyggeland.dk/common_passion_images/${singleShow.id}.png  `;
+  document.querySelector("img.seriesimages").src = `${singleShow.media_url}`;
   document.querySelector("img.seriesimages").alt = singleShow.title;
   document.querySelector(".genre").textContent = `${singleShow.genre}`;
   document.querySelector(".seasons").textContent = `${singleShow.seasons}`;
   document.querySelector(".rating").textContent = `${singleShow.ratings}`;
-  document.querySelector(
-    ".streaming"
-  ).textContent = `${singleShow.streaming_plateforms}`;
+  // document.querySelector(
+  //   ".streaming"
+  // ).textContent = `${singleShow.streaming_plateforms}`;
 }
 /*burger menu*/
 function openNav() {

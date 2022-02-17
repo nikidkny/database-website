@@ -28,12 +28,12 @@ nav ul {
   max-width: 100%;
   margin: 5%;
 }
-/* .mmyp {
+.p {
   text-align: left;
   font-size: 1.2rem;
   font-family: "Koh Santepheap", cursive;
   color: var(--p-color);
-} */
+}
 
 /* mobile view */
 @media only screen and (max-width: 600px) {
