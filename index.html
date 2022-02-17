@@ -9,57 +9,34 @@
   </head>
   <body>
     <header>
-      <a href="index.html">
-        <img
-          src="images/couch_potato_logo.png"
-          alt="logo"
-          height="70"
-          width="100"
-      /></a>
-      <nav>
-        <ul>
-          <li class="nav"><a href="index.html">Home</a></li>
-          <li class="series"><a href="productlist.html">Gen - Z</a></li>
-          <li class="seriesname"><a href="product.html">Millennials</a></li>
-        </ul>
-      </nav>
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <a href="#">Millenials</a>
+          <a href="#">GenZ</a>
+        </div>
+      </div>
+      <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+        >&#9776;
+      </span>
     </header>
-    <main>
-      <img class="seriesImage" src="images/The Wire.png" alt="poster" />
-      <article>
-        <h2>Series Name : The Wire</h2>
-
-        <h3>Genre:</h3>
-        <p>Crime,Drama, Thriller</p>
-
-        <h3>Released on</h3>
-        <p>2002</p>
-
-        <h3>Last Episode on</h3>
-        <p>2008</p>
-
-        <h3>Description</h3>
-        <p>
-          Looking at it from the perspective of the drug dealers and the law
-          enformcement, The wire is showing the scenes of the Baltimore drug
-          situation.
-        </p>
-
-        <h3>Streaming On:</h3>
-        <p>HBO Max, iTunes, Amazon Prime Video, Google Play, Vudu</p>
-        <h3>Rating: 9.3</h3>
-
-        <img src="images/star.png" alt="star" height="70" width="70" />
-
-        <h3>Seasons : 5</h3>
-        <p>Season:1</p>
-        <p>Season:2</p>
-        <p>Season:3</p>
-        <p>Season:4</p>
-        <p>Season:5</p>
-      </article>
+    <main class="container_landing">
+      <p>Welcome to</p>
+      <h1 class="h1_landing_page">COUCH POTATO</h1>
+      <img class="couch_img" src="/images/couch-01.svg" alt="couch-01" />
+      <img class="potato_img" src="/images/potato-01.svg" alt="potato-01" />
+      <p>
+        Here you can find the most popular TV series from the early 90s up to
+        now.<br />Let’s begin by choosing an era.
+      </p>
+      <section class="buttons">
+        <button type="button" class="m-button">Millenials</button>
+        <button type="button" class="z-button">GenZ</button>
+      </section>
     </main>
-    <footer>MMD Students</footer>
+    <footer></footer>
     <script src="main.js"></script>
   </body>
 </html>
