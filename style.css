@@ -204,6 +204,50 @@ button {
   min-width: 240px;
 }
 
+.logo{
+padding-left: 20px;
+}
+
+
+
+.miltitle{
+
+
+}
+
+.seriesName{
+
+
+}
+
+.rating{
+
+
+}
+
+.seriesDescription{
+
+
+}
+
+.serieslist{
+display: grid;
+}
+
+.photo{
+float: left;
+padding-left: 70px ;
+}
+
+.text{
+float: right;
+padding-right: 80px;
+text-align: left;
+}
+
+p{
+color: black;
+}
 /* listlayout
 */
 .listLayout {
