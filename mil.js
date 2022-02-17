@@ -1,7 +1,7 @@
 // <!--the endpoint https://friends-5d79.restdb.io/rest/showlist
 // the API key 620d387c34fd621565858693 -->
 const url =
-  " https://friends-5d79.restdb.io/rest/showlist?q={%22release%20year%22:%20{%20%22$lt%22:%201996%20}}&sort=ratings";
+  " https://friends-5d79.restdb.io/rest/showlist?q={%22release%20year%22:%20{%20%22$lt%22:%201996%20}}&sort=ratings&dir=-1";
 const options = {
   headers: {
     "x-apikey": "620d387c34fd621565858693",
@@ -55,7 +55,7 @@ function showSeries(series) {
   copy.querySelector("span").textContent = `${series.ratings}`;
   copy.querySelector(
     "img"
-  ).scr = `https://hyggeland.dk/common_passion_images/webp/1000/${series._id}.webp`;
+  ).src = `https://hyggeland.dk/common_passion_images/webp/1000/${series.id}.webp`;
   copy.querySelector("p").textContent = `${series.description}`;
   // grabing parent
   const parent = document.querySelector("main");
