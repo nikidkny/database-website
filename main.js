@@ -53,9 +53,7 @@ function showSeries(series) {
   // copy.querySelector("a").setAttribute("href", `series.html?id=${series.id}`);
   copy.querySelector("h2").textContent = `${series.title}`;
   copy.querySelector("span").textContent = `${series.ratings}`;
-  copy.querySelector(
-    "img"
-  ).src = `https://hyggeland.dk/common_passion_images/webp/1000/${series.id}.webp`;
+  copy.querySelector("img").src = `${series.media_url}`;
   copy.querySelector("p").textContent = `${series.description}`;
   // grabing parent
   const parent = document.querySelector("main");
