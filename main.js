@@ -1,8 +1,5 @@
 // <!--the endpoint https://friends-5d79.restdb.io/rest/showlist
 // the API key 620d387c34fd621565858693 -->
-const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("id");
-
 const url = "https://friends-5d79.restdb.io/rest/showlist";
 const options = {
   headers: {
@@ -16,13 +13,9 @@ fetch(url, options)
     }
     return response.json();
   })
-  //   .then((data) => {
-  //     // console.log(data);
-  //     handleShowlist(data);
-  //   })
   .then((data) => {
-    console.log(data);
-    handleShows(data);
+    // console.log(data);
+    handleShowlist(data);
   });
 // .catch((e) => {
 //   console.error("An error occured:", e.message);
@@ -84,25 +77,3 @@ function closeNav() {
 }
 
 // Nancy code
-
-function handleShows(data) {
-  console.log(data);
-  data.forEach(showTvSeries);
-}
-function showTvSeries(singleShow) {
-  console.log(singleShow);
-  document.querySelector("h2").textContent = singleShow.title;
-  document.querySelector(".productname").textContent = singleShow.description;
-  // const template = document.querySelector("#singleShowTemplate").content;
-  // const copy = template.cloneNode(true);
-
-  // copy.querySelector("h2").textContent = `${singleShow.title}`;
-  // copy.querySelector("p").textContent = `${singleShow.description}`;
-
-  //   document.querySelector(
-  //     "img.seriesimages"
-  //   ).src = `images/The Wire${popularShows.id}.png`;
-  //   document.querySelector("img.seriesimages").alt = popularShows.description;
-  // const parent = document.querySelector("main");
-  // parent.appendChild(copy);
-}
