@@ -1,6 +1,6 @@
-// <!--the endpoint https://friends-5d79.restdb.io/rest/database-tv-shows
+// <!--the endpoint https://friends-5d79.restdb.io/rest/showlist
 // the API key 620d387c34fd621565858693 -->
-const url = "https://friends-5d79.restdb.io/rest/database-tv-shows";
+const url = "https://friends-5d79.restdb.io/rest/showlist";
 const options = {
   headers: {
     "x-apikey": "620d387c34fd621565858693",
@@ -14,7 +14,7 @@ fetch(url, options)
     return response.json();
   })
   .then((data) => {
-    console.log(data);
+    // console.log(data);
     handleShowlist(data);
   })
   .catch((e) => {
@@ -23,7 +23,6 @@ fetch(url, options)
 
 function handleShowlist(data) {
   console.log(data);
-  // 1. make the
   data.forEach(showSeries);
 }
 
@@ -31,7 +30,7 @@ function handleShowlist(data) {
   /*         <template id="smallSeriesTemplate">
           <article>
             <img class="seriesImage" src="" alt="" />
-            <h2 class="seriesName"></h2>
+            <h2 class="seriesName"></h2> done
             <p class="seriesDescription"></p>
           </article>
         </template>
@@ -44,7 +43,11 @@ function showSeries(series) {
   // cloning the template
   const copy = template.cloneNode(true);
   //changing the contents => do this last
-
+  copy.querySelector(".seriesName").textContent = `${showlist.title}`;
+  copy.querySelector(
+    "img"
+  ).src = `https://friends-5d79.restdb.io/rest/showlist/images/webp/1000/${showlist.id}.webp`;
+  copy.querySelector("p").textContent = `${showlist.description}`;
   // grabing parent
   const parent = document.querySelector("main");
   // append
