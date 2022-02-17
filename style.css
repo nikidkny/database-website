@@ -207,28 +207,6 @@ button {
 padding-left: 20px;
 }
 
-
-
-.miltitle{
-
-
-}
-
-.seriesName{
-
-
-}
-
-.rating{
-
-
-}
-
-.seriesDescription{
-
-
-}
-
 .serieslist{
 display: grid;
 }
@@ -258,4 +236,14 @@ color: black;
 article img {
   max-width: 100%;
   max-height: 100%;
+}
+
+@media (min-width: 767px) {
+p {
+font-size: 1.25rem;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
 }
