@@ -1,5 +1,8 @@
 // <!--the endpoint https://friends-5d79.restdb.io/rest/showlist
 // the API key 620d387c34fd621565858693 -->
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+
 const url = "https://friends-5d79.restdb.io/rest/showlist";
 const options = {
   headers: {
@@ -9,17 +12,17 @@ const options = {
 fetch(url, options)
   .then((response) => {
     if (!response.ok) {
-      throw Error(response.statusText);
+      //   throw Error(response.statusText);
     }
     return response.json();
   })
   .then((data) => {
     // console.log(data);
     handleShowlist(data);
-  })
-  .catch((e) => {
-    console.error("An error occured:", e.message);
   });
+//   .catch((e) => {
+//     console.error("An error occured:", e.message);
+//   });
 
 function handleShowlist(data) {
   console.log(data);
@@ -61,4 +64,15 @@ function openNav() {
 
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
+}
+
+// Nancy code
+function showTvSeries(popularShows) {
+  console.log(popularShows);
+  document.querySelector(".myTitle").textContent = popularShows.title;
+  document.querySelector(".summary").textContent = popularShows.description;
+  //   document.querySelector(
+  //     "img.seriesimages"
+  //   ).src = `images/The Wire${popularShows.id}.png`;
+  //   document.querySelector("img.seriesimages").alt = popularShows.description;
 }
