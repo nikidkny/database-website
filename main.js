@@ -1,14 +1,64 @@
-const url = "https://friends-5d79.restdb.io/rest/database-tv-shows";
-fetch(url)
-  .then((res) => res.json())
-  .then((data) => showSeries(data));
+// <!--the endpoint https://friends-5d79.restdb.io/rest/showlist
+// the API key 620d387c34fd621565858693 -->
+const url = "https://friends-5d79.restdb.io/rest/showlist";
+const options = {
+  headers: {
+    "x-apikey": "620d387c34fd621565858693",
+  },
+};
+fetch(url, options)
+  .then((response) => {
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
+    return response.json();
+  })
+  .then((data) => {
+    // console.log(data);
+    handleShowlist(data);
+  })
+  .catch((e) => {
+    console.error("An error occured:", e.message);
+  });
 
-function showSeries(tvshow) {
-  console.log(tvshow);
-  document.querySelector(".series").textContent = tvshow.id;
-  //   document.querySelector(".series").textContent = tvshow.description;
-  //   document.querySelector(
-  //     "img.seriesImage"
-  //   ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
-  //   document.querySelector("img.productImage").alt = product.productdisplayname;
+function handleShowlist(data) {
+  console.log(data);
+  data.forEach(showSeries);
+}
+
+{
+  /*         <template id="smallSeriesTemplate">
+          <article>
+            <img class="seriesImage" src="" alt="" />
+            <h2 class="seriesName"></h2> done
+            <p class="seriesDescription"></p>
+          </article>
+        </template>
+ */
+}
+
+function showSeries(series) {
+  // grabbing the tamplate
+  const template = document.querySelector("#smallSeriesTemplate").content;
+  // cloning the template
+  const copy = template.cloneNode(true);
+  //changing the contents => do this last
+  copy.querySelector(".seriesName").textContent = `${showlist.title}`;
+  copy.querySelector(
+    "img"
+  ).src = `https://friends-5d79.restdb.io/rest/showlist/images/webp/1000/${showlist.id}.webp`;
+  copy.querySelector("p").textContent = `${showlist.description}`;
+  // grabing parent
+  const parent = document.querySelector("main");
+  // append
+  parent.appendChild(copy);
+}
+
+/*burger menu*/
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
 }
