@@ -35,6 +35,6 @@ function handleShow(singleShow) {
   document.querySelector("p").textContent = singleShow.description;
   document.querySelector(
     "img.seriesimages"
-  ).src = `https://hyggeland.dk/common_passion_images/The-Wire${singleShow.id}.png  `;
+  ).src = `https://hyggeland.dk/common_passion_images/${singleShow.id}.png  `;
   document.querySelector("img.seriesimages").alt = singleShow.title;
 }
