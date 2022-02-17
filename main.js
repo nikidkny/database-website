@@ -26,21 +26,27 @@ function handleShowlist(data) {
   data.forEach(showSeries);
 }
 
-/*    Genz template    
-       <template id="smallSeriesTemplate">
-          <article>
-            <img class="seriesImage" src="" alt="" />
-            <h2 class="seriesName"></h2> done
-            <p class="seriesDescription"></p>
-          </article>
-        </template>
+/*         <template id="smallSeriesTemplate">
+        <article>
+          <img
+            class="seriesImage"
+            src="https://hyggeland.dk/common_passion_images/Sabrina-the-teenage-witch.png"
+            alt="{name}"
+          />
+          <h2 class="seriesName">Sabrina the teenage witch</h2>
+          <h3 class="rating">Imdb rating:<span>6.7</span></h3>
+          <p class="seriesDescription">
+            This is about the advendtures of a 16 year-old girl, who finds out
+            she is part of the magical world.
+          </p>
+
  */
 
 function showSeries(series) {
   console.log(series);
   // grabbing the tamplate
   const template = document.querySelector("#smallSeriesTemplate").content;
-  // cloning the template
+  // copying the template
   const copy = template.cloneNode(true);
   //changing the contents => do this last
   copy.querySelector("h2").textContent = `${series.title}`;
@@ -54,6 +60,11 @@ function showSeries(series) {
   // append
   parent.appendChild(copy);
 }
+
+// url sort by release year
+// https://friends-5d79.restdb.io/rest/showlist?q={}&sort=release%20year
+//grouped by release year
+// https://friends-5d79.restdb.io/rest/showlist?h={%22$groupby%22:%20[%22release%20year%22]}
 
 /*burger menu*/
 function openNav() {
