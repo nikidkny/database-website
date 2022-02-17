@@ -9,50 +9,62 @@ const options = {
 fetch(url, options)
   .then((response) => {
     if (!response.ok) {
-      throw Error(response.statusText);
+      // throw Error(response.statusText);
     }
     return response.json();
   })
   .then((data) => {
     // console.log(data);
     handleShowlist(data);
-  })
-  .catch((e) => {
-    console.error("An error occured:", e.message);
   });
+// .catch((e) => {
+//   console.error("An error occured:", e.message);
+// });
 
 function handleShowlist(data) {
   console.log(data);
   data.forEach(showSeries);
 }
 
-{
-  /*         <template id="smallSeriesTemplate">
-          <article>
-            <img class="seriesImage" src="" alt="" />
-            <h2 class="seriesName"></h2> done
-            <p class="seriesDescription"></p>
-          </article>
-        </template>
+/*         <template id="smallSeriesTemplate">
+        <article>
+          <img
+            class="seriesImage"
+            src="https://hyggeland.dk/common_passion_images/Sabrina-the-teenage-witch.png"
+            alt="{name}"
+          />
+          <h2 class="seriesName">Sabrina the teenage witch</h2>
+          <h3 class="rating">Imdb rating:<span>6.7</span></h3>
+          <p class="seriesDescription">
+            This is about the advendtures of a 16 year-old girl, who finds out
+            she is part of the magical world.
+          </p>
+
  */
-}
 
 function showSeries(series) {
+  console.log(series);
   // grabbing the tamplate
   const template = document.querySelector("#smallSeriesTemplate").content;
-  // cloning the template
+  // copying the template
   const copy = template.cloneNode(true);
   //changing the contents => do this last
-  copy.querySelector(".seriesName").textContent = `${showlist.title}`;
+  copy.querySelector("h2").textContent = `${series.title}`;
+  copy.querySelector("span").textContent = `${series.ratings}`;
   copy.querySelector(
     "img"
-  ).src = `https://friends-5d79.restdb.io/rest/showlist/images/webp/1000/${showlist.id}.webp`;
-  copy.querySelector("p").textContent = `${showlist.description}`;
+  ).scr = `https://hyggeland.dk/common_passion_images/webp/1000/${series._id}.webp`;
+  copy.querySelector("p").textContent = `${series.description}`;
   // grabing parent
   const parent = document.querySelector("main");
   // append
   parent.appendChild(copy);
 }
+
+// url sort by release year
+// https://friends-5d79.restdb.io/rest/showlist?q={}&sort=release%20year
+//grouped by release year
+// https://friends-5d79.restdb.io/rest/showlist?h={%22$groupby%22:%20[%22release%20year%22]}
 
 /*burger menu*/
 function openNav() {
