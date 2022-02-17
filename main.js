@@ -56,6 +56,7 @@ function showSeries(series) {
   // copying the template
   const copy = template.cloneNode(true);
   //changing the contents => do this last
+  copy.querySelector("a").setAttribute("href", `series.html?id=${series.id}`);
   copy.querySelector("h2").textContent = `${series.title}`;
   copy.querySelector("span").textContent = `${series.ratings}`;
   copy.querySelector(
