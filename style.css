@@ -28,12 +28,12 @@ nav ul {
   max-width: 100%;
   margin: 5%;
 }
-/* .mmyp {
+.p {
   text-align: left;
   font-size: 1.2rem;
   font-family: "Koh Santepheap", cursive;
   color: var(--p-color);
-} */
+}
 
 /* mobile view */
 @media only screen and (max-width: 600px) {
@@ -202,4 +202,17 @@ button {
 }
 .m-button {
   min-width: 240px;
+}
+
+/* listlayout
+*/
+.listLayout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 600px));
+  grid-template-rows: repeat(auto-fill, minmax(600px, 1000px));
+  gap: 2em;
+}
+article img {
+  max-width: 100%;
+  max-height: 100%;
 }
