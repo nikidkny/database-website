@@ -70,6 +70,7 @@ p {
   font-family: "Monoton", cursive;
   letter-spacing: +2px;
   font-size: 4rem;
+  font-weight: lighter;
 }
 .container_landing {
   display: flex;
