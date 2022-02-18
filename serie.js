@@ -1,7 +1,6 @@
 // <!--the endpoint https://friends-5d79.restdb.io/rest/showlist
 // the API key 620d387c34fd621565858693 -->
 const urlParams = new URLSearchParams(window.location.search);
-
 const id = urlParams.get("id");
 // const id = "620bacfef701f460000a24f7";
 // console.log(_id);
@@ -33,8 +32,20 @@ function handleShow(singleShow) {
   console.log(singleShow);
   document.querySelector("h2").textContent = singleShow.title;
   document.querySelector("p").textContent = singleShow.description;
-  document.querySelector(
-    "img.seriesimages"
-  ).src = `https://hyggeland.dk/common_passion_images/${singleShow.id}.png  `;
+  document.querySelector("img.seriesimages").src = `${singleShow.media_url}`;
   document.querySelector("img.seriesimages").alt = singleShow.title;
+  document.querySelector(".genre").textContent = `${singleShow.genre}`;
+  document.querySelector(".seasons").textContent = `${singleShow.seasons}`;
+  document.querySelector(".rating").textContent = `${singleShow.ratings}`;
+  // document.querySelector(
+  //   ".streaming"
+  // ).textContent = `${singleShow.streaming_plateforms}`;
+}
+/*burger menu*/
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
 }
