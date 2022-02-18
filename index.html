@@ -9,6 +9,13 @@
   </head>
   <body>
     <header>
+      <a href="index.html">
+        <img
+          src="images/couch_potato_logo.png"
+          alt="logo"
+          height="70"
+          width="100"
+      /></a>
       <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
           >&times;</a
@@ -25,17 +32,26 @@
     <main class="container_landing">
       <p>Welcome to</p>
       <h1 class="h1_landing_page">COUCH POTATO</h1>
-      <img class="couch_img" src="/images/couch-01.svg" alt="couch-01" />
-      <img class="potato_img" src="/images/potato-01.svg" alt="potato-01" />
+      <div class="potato_container">
+        <img class="couch_img" src="images/couch-01.svg" alt="couch-01" />
+
+        <img class="potato_img" src="images/potato-01.svg" alt="potato-01" />
+        <img
+          class="popcorn_img"
+          src="images/pop_corn-01.svg"
+          alt="popcorn-01"
+        />
+      </div>
       <p>
         Here you can find the most popular TV series from the early 90s up to
         now.<br />Let’s begin by choosing an era.
       </p>
       <section class="buttons">
-        <a href="millenialmovielist.html"><button type="button" class="m-button">Millennials</button></a>
-        <a href="genzmovielist.html"><button type="button" class="z-button">GenZ</button></a>
+        <button type="button" class="m-button">Millennials</button>
+        <button type="button" class="z-button">GenZ</button>
       </section>
     </main>
     <footer></footer>
+    <script src="main.js"></script>
   </body>
 </html>
