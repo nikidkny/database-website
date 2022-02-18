@@ -204,15 +204,31 @@ button {
   min-width: 240px;
 }
 
+.logo {
+  padding-left: 20px;
+}
+
+.serieslist {
+  display: grid;
+}
+
+.photo {
+  float: left;
+  padding-left: 70px;
+}
+
+.text {
+  float: right;
+  padding-right: 80px;
+  text-align: left;
+}
+
+p {
+  color: black;
+}
 /* listlayout
 */
-.listLayout {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 600px));
-  grid-template-rows: repeat(auto-fill, minmax(600px, 1000px));
-  gap: 2em;
-}
-article img {
+img {
   max-width: 100%;
   max-height: 100%;
 }
