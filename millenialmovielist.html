@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <a href="index.html" class="logo">
+    <header class="logoheader">
+      <a id="logo" href="index.html" class="logo">
         <img
-          src="images/couch_potato_logo.png"
+          src="images/logo-01.svg"
           alt="logo"
           height="70"
           width="100"
@@ -25,13 +25,19 @@
           <a href="genzmovielist.html">GenZ</a>
         </div>
       </div>
-      <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+      <span
+        style="
+          font-size: 30px;
+          cursor: pointer;
+          display: flex;
+          justify-content: flex-end;
+        "
+        onclick="openNav()"
         >&#9776;
       </span>
     </header>
-    <main>
+    <main class="serieslist">
       <h1 class="miltitle">Millenials</h1>
-      <div class="serieslist">
         <template id="smallSeriesTemplate" class="listLayout">
           <article>
             <img
@@ -39,7 +45,6 @@
               src="https://hyggeland.dk/common_passion_images/Sabrina-the-teenage-witch.png"
               alt="{name}"
             />
-            <div>
               <h2 class="seriesName">Sabrina the teenage witch</h2>
               <h3 class="rating">Imdb rating:<span>6.7</span></h3>
               <a href="series.html?id=620bacfef701f460000a2510">Read more</a>
@@ -47,7 +52,6 @@
                 This is about the advendtures of a 16 year-old girl, who finds
                 out she is part of the magical world.
               </p>
-            </div>
           </article>
         </template>
       </div>

@@ -9,13 +9,6 @@
   </head>
   <body>
     <header>
-      <a href="index.html">
-        <img
-          src="images/couch_potato_logo.png"
-          alt="logo"
-          height="70"
-          width="100"
-      /></a>
       <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
           >&times;</a
@@ -25,7 +18,14 @@
           <a href="genzmovielist.html">GenZ</a>
         </div>
       </div>
-      <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+      <span
+        style="
+          font-size: 30px;
+          cursor: pointer;
+          display: flex;
+          justify-content: flex-end;
+        "
+        onclick="openNav()"
         >&#9776;
       </span>
     </header>
@@ -47,8 +47,22 @@
         now.<br />Let’s begin by choosing an era.
       </p>
       <section class="buttons">
-        <button type="button" class="m-button">Millennials</button>
-        <button type="button" class="z-button">GenZ</button>
+        <button
+          onclick="window.location.href='millenialmovielist.html'"
+          ;
+          type="button"
+          class="m-button"
+        >
+          Millennials
+        </button>
+        <button
+          onclick="window.location.href='genzmovielist.html'"
+          ;
+          type="button"
+          class="z-button"
+        >
+          GenZ
+        </button>
       </section>
     </main>
     <footer></footer>

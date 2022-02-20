@@ -3,13 +3,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,400;0,600;1,200&display=swap");
 
-/* desktop view */
-.mmyheader {
+/* general styling*/
+.logoheader {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0rem;
+  grid-template-columns: 0.5fr 1.5fr;
 }
-.mmymain {
+#logo {
+  height: 75%;
+}
+/* desktop view */
+series .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
@@ -37,7 +40,7 @@ nav ul {
 
 /* mobile view */
 @media only screen and (max-width: 600px) {
-  .mmymain {
+  series .main {
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -68,7 +71,7 @@ html {
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
@@ -226,8 +229,7 @@ button {
 p {
   color: black;
 }
-/* listlayout
-*/
+/* Listview */
 img {
   max-width: 100%;
   max-height: 100%;

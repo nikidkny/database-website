@@ -1,7 +1,7 @@
 // <!--the endpoint https://friends-5d79.restdb.io/rest/showlist
 // the API key 620d387c34fd621565858693 -->
 const url =
-  "https://friends-5d79.restdb.io/rest/showlist?q={%22release%20year%22:%20{%20%22$gt%22:%201996%20}}&sort=ratings";
+  "https://friends-5d79.restdb.io/rest/showlist?q={%22release%20year%22:%20{%20%22$gt%22:%201996%20}}&sort=ratings&dir=-1";
 const options = {
   headers: {
     "x-apikey": "620d387c34fd621565858693",
