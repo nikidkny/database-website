@@ -37,9 +37,10 @@ function handleShow(singleShow) {
   document.querySelector(".genre").textContent = `${singleShow.genre}`;
   document.querySelector(".seasons").textContent = `${singleShow.seasons}`;
   document.querySelector(".rating").textContent = `${singleShow.ratings}`;
-  // document.querySelector(
-  //   ".streaming"
-  // ).textContent = `${singleShow.streaming_plateforms}`;
+  document.querySelector(
+    ".streaming"
+  ).textContent = `${singleShow.streaming_platforms}`;
+  document.querySelector(".released").textContent = singleShow.release_year;
 }
 /*burger menu*/
 function openNav() {
